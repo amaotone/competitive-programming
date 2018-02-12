@@ -1,5 +1,8 @@
-# atcoder practice
+# AtCoder Practice
 
-my atcoder answers
+My answers @ AtCoder
 
-record: http://kenkoooo.com/atcoder/?user=amaotone
+- Python
+- Kotlin
+
+http://kenkoooo.com/atcoder/?user=amaotone

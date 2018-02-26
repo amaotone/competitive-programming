@@ -2,6 +2,7 @@ H, W = map(int, input().split())
 cost = [list(map(int, input().split())) for _ in range(10)]
 wall = [list(map(int, input().split())) for _ in range(H)]
 
+# warshall-floyd
 for k in range(10):
     for i in range(10):
         for j in range(10):

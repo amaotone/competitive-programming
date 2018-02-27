@@ -6,3 +6,7 @@ My answers @ AtCoder
 - Kotlin
 
 http://kenkoooo.com/atcoder/?user=amaotone
+
+## Need to review
+
+- ABC077 D Small Multiple

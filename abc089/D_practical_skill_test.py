@@ -1,16 +1,12 @@
 H, W, D = map(int, input().split())
 p = {}
 for i in range(H):
-    inp = list(map(int, input().split()))
-    for j, value in enumerate(inp):
+    for j, value in enumerate(map(int, input().split())):
         p[value] = (i, j)
 
-cost = {i: 0 for i in range(1, D + 1)}
-for i in range(1, D + 1):
-    now = i + D
-    while now <= H * W:
-        cost[now] = cost[now - D] + abs(p[now][0] - p[now - D][0]) + abs(p[now][1] - p[now - D][1])
-        now += D
+cost = {}
+for i in range(1, W * H + 1):
+    cost[i] = cost[i - D] + abs(p[i][0] - p[i - D][0]) + abs(p[i][1] - p[i - D][1]) if i > D else 0
 
 Q = int(input())
 for _ in range(Q):

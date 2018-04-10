@@ -2,10 +2,7 @@
 
 My answers @ AtCoder
 
-- Python
-- Kotlin
-
-http://kenkoooo.com/atcoder/?user=amaotone
+status: http://kenkoooo.com/atcoder/?user=amaotone
 
 ## Need to review
 

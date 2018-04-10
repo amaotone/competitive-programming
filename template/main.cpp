@@ -1,12 +1,5 @@
 // TEMPLATE
-#include <algorithm>
-#include <iostream>
-#include <set>
-#include <vector>
-#include <cmath>
-#include <utility>
-#include <numeric>
-
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 typedef vector<int> vi;
@@ -21,10 +14,6 @@ template<class T>bool chmin(T &a, const T &b) {if(b<a) {a=b; return 1;} return 0
 #define RREPS(i, n) for (int i=n;(i)>0;(i)--)
 #define len(x) ((int)(x).size())
 #define print(x) (cout<<(x)<<"\n")
-const int dx[4]={1,0,-1,0};
-const int dy[4]={0,1,0,-1};
-const int dx8[8]={1,0,-1,1,-1,1,0,-1};
-const int dy8[8]={1,1,1,0,0,-1,-1,-1};
 
 // LIBRARY
 

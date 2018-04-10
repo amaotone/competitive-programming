@@ -24,7 +24,7 @@ for i in range(1, T+1):
             g=lambda theta: sqrt(2)*sin(d45-theta),
             x=0
         )
-        # print(degrees(theta))
+        # print(degrees(theta%(2*pi)))
         print(*rotate(0.5, 0, 0, theta))
         print(*rotate(0, 0.5, 0, theta))
         print(*rotate(0, 0, 0.5, theta))

@@ -51,10 +51,7 @@ macro_rules! get {
 
 fn main() {
     let N = get!(usize);
-    let mut v = Vec::new();
-    for _ in 0..N {
-        v.push(get!(usize));
-    }
+    let v: Vec<usize> = (0..N).map(|_| get!(usize)).collect();
     let sum = v.iter().sum();
     let ans = if sum % 10 != 0 {
         sum

@@ -8,16 +8,15 @@ use std::str::FromStr;
 const MOD: i32 = 1_000_000_007;
 
 fn main() {
-    let (q, h, s, d): (u64, u64, u64, u64) = input();
-    let n: u64 = input();
-    let h = min(q * 2, h);
-    let s = min(h * 2, s);
-    let ans = if s * 2 < d {
-        s * n
+    let x: u64 = input();
+    let y = x / 11;
+    if x % 11 == 0 {
+        println!("{}", y * 2);
+    } else if x % 11 <= 6 {
+        println!("{}", y * 2 + 1);
     } else {
-        d * (n / 2) + s * (n % 2)
-    };
-    println!("{}", ans);
+        println!("{}", y * 2 + 2);
+    }
 }
 
 trait Read {

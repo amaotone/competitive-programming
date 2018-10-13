@@ -16,20 +16,7 @@ template<class T>bool chmin(T &a, const T &b) {if(b<a) {a=b; return 1;} return 0
 #define print(x) (cout<<(x)<<"\n")
 
 // LIBRARY
-vi classify_sl(vi S) {
-    vi SL(S.size(), 0);
-    
-}
 
-vi sa_is(vi S, int k) {
-    if (S.size() == 1) {
-        vi res(1, 0);
-        return res;
-    }
-    S.push_back(0);  // 番兵
-    int len = S.size();
-
-}
 
 // SOLVE
 signed main() {

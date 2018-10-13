@@ -65,7 +65,6 @@ signed main() {
         Snu[v].push_back((Edge){u, b});
     }
     auto d_yen = dijkstra(Yen, s);
-    auto d_yen2 = dijkstra(Yen, t);
     auto d_snu = dijkstra(Snu, t);
     
     vector<ll> ans(n);

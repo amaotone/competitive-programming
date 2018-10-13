@@ -8,16 +8,17 @@ use std::str::FromStr;
 const MOD: i32 = 1_000_000_007;
 
 fn main() {
-    let (q, h, s, d): (u64, u64, u64, u64) = input();
-    let n: u64 = input();
-    let h = min(q * 2, h);
-    let s = min(h * 2, s);
-    let ans = if s * 2 < d {
-        s * n
-    } else {
-        d * (n / 2) + s * (n % 2)
-    };
-    println!("{}", ans);
+    let n: usize = input();
+    let mut cnt = 0;
+    for i in 1..n + 1 {
+        if i % 2 == 0 { continue }
+        let mut div = 0;
+        for j in 1..i + 1 {
+            if i % j == 0 { div += 1; }
+        }
+        if div == 8 { cnt += 1; }
+    }
+    println!("{}", cnt);
 }
 
 trait Read {

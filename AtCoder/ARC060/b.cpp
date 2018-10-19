@@ -20,11 +20,46 @@ template<class T>bool chmin(T &a, const T &b) {if(b<a) {a=b; return 1;} return 0
 
 
 // SOLVE
-void solve() {
-
+ll f(ll b, ll n) {
+    if (n<b) return n;
+    return f(b, n/b) + n%b;
 }
+
 signed main() {
     cin.tie(0);
    	ios::sync_with_stdio(false);
-    solve();
+
+    ll n; cin>>n;
+    ll s; cin>>s;
+
+    // 自明
+    if (n==s) {
+        print(n+1);
+        return 0;
+    }
+    if (s > n) {
+        print(-1);
+        return 0;
+    }
+    // sqrt(n)までは全探索
+    ll sq = sqrt(n) + 1;
+    FOR(i, 2, sq) {
+        if (f(i, n) == s) {
+            print(i);
+            return 0;
+        }
+    }
+    // 残りは2桁 上の桁で探索
+    ll ans = 1e18+1;
+    FOR(i, 1, sq) {
+        ll b = (n-s)/i + 1;
+        if ((n-s)%i==0 && f(b, n) == s) {
+            ans = min(ans, b);
+        }
+    }
+    if (ans == 1e18+1) {
+        print(-1);
+        return 0;
+    }
+    print(ans);
 }
